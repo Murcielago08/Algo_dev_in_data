@@ -1,0 +1,51 @@
+Jour 1:
+1. LIFO (Last In First Out) - Pile
+    - Opérations principales : Push, Pop, Peek
+    - Gestion de la mémoire : allocation, taille maximale, débordement (overflow)
+    - Applications pratiques : annulation/reprise, parcours récursif simulé
+    - Complexité : insertion/suppression en O(1)
+
+2. FIFO (First In First Out) - File
+    - Opérations principales : Enqueue, Dequeue, Front
+    - Implémentations : tableau circulaire, liste chaînée
+    - Applications pratiques : gestion des tâches, buffers, ordonnancement
+    - Complexité : insertion/suppression en O(1)
+
+3. Listes chaînées
+    - Concepts : nœuds et pointeurs, tête, queue
+    - Opérations : insertion (début, fin, position), suppression, recherche
+    - Parcours : itération, utilisation d'un itérateur
+    - Variantes : simple, doublement chaînée, circulaire
+    - Complexité : accès aléatoire O(n), insertion/suppression O(1) si position connue
+
+4. Arbres et parcours (Tree Traversal)
+    - Concepts : nœud, racine, feuilles, hauteur, profondeur
+    - Parcours en profondeur (DFS) : préordre, infixe, postordre
+    - Parcours en largeur (BFS) : parcours par niveau (utilise une file)
+    - Applications : recherches, expression d'arbres binaires, indexation
+    - Problèmes et optimisations : équilibrage, parcours itératif vs récursif
+
+Jour 2:
+1. Programmation Orientée Objet (POO)
+   - Classes et objets
+   - Héritage
+   - Encapsulation
+   - Polymorphisme
+   - Méthodes et attributs
+
+2. Composition Fonctionnelle
+   - Fonctions pures
+   - Immutabilité
+   - Map, Filter, Reduce
+   - Chaînage de fonctions
+   - Éviter les effets de bord
+
+3. Récursivité
+   - Principe de base
+   - Cas de base et cas récursif
+   - Exemples classiques:
+     * Factorielle
+     * Suite de Fibonacci
+     * Parcours d'arbre
+   - Stack overflow et optimisations
+   - Récursivité terminale
