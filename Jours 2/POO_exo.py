@@ -39,14 +39,14 @@ class Etudiant(Personne):
 
     def print_niveau(self) -> str:
         return ", ".join(self.niveau) if self.niveau else "Aucun niveau d'étude défini."
-    
+
     def etudier(self, niveau: str) -> str:
         """Ajoute un niveau d'étude valide et renvoie une confirmation."""
         if not isinstance(niveau, str) or not niveau.strip():
             raise ValueError("Le niveau doit être une chaîne non vide.")
-        
+
         niveau_clean = niveau.strip()
-        
+
         # Vérifie si le niveau existe déjà et incrémente ou ajoute
         for i in range(len(self.niveau)):
             if self.niveau[i].startswith(niveau_clean):
@@ -56,7 +56,7 @@ class Etudiant(Personne):
                     return f"{self.nom} a maintenant {niveau_clean} Niveau {current_level + 1}"
                 else:
                     return f"{niveau_clean} est déjà au niveau maximum."
-        
+
         # Si le niveau n'existe pas, l'ajoute avec le niveau 1
         self.niveau.append(f"{niveau_clean} Niveau 1")
         return f"{self.nom} étudie maintenant : {niveau_clean} Niveau 1"
@@ -127,7 +127,7 @@ if __name__ == "__main__":
     p = Personne("Alice", 30)
     print(p.presentation())
     print(f"ID unique: {p.id}")
-    
+
     print("\n----- Compte Bancaire -----")
     c = CompteBancaire(p, 100.0)
     print(c.afficher_solde())

@@ -1,2 +1,7 @@
 /.idea
 *.pdf
+*.pptx
+__pycache__/
+*.pyc
+env_fastapi/
+env_algo/

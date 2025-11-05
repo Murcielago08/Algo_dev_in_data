@@ -188,7 +188,7 @@ class School:
         # créer enseignants
         t1 = Teacher("Dupont", "Alice", specialite="Mathématiques")
         t2 = Teacher("Martin", "Paul", specialite="Physique")
-        sch.add_teacher(t1); sch.add_teacher(t2)
+        sch.add_teacher(t1); sch.add_teacher(t2)  # noqa: E702
         # créer étudiants
         s1 = Student("Bernard", "Luc")
         s2 = Student("Moreau", "Emma")
