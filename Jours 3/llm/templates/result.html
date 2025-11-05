@@ -8,14 +8,18 @@
     <h1>Résultat de l’étude de marché</h1>
 
     {% if result %}
-        <h2>Données brutes générées :</h2>
-        <pre>{{ result | tojson(indent=2) }}</pre>
+        <pre style="white-space: pre-wrap;">{{ result }}</pre>
     {% else %}
         <p>Aucune donnée reçue.</p>
     {% endif %}
 
     <hr>
-    <a href="/">↩ Retour</a><br>
-    <a href="{{ pdf_path }}" download>Télécharger le PDF généré</a>
+    <a href="/">↩ Retour à l’accueil</a><br><br>
+
+    {% if pdf_url %}
+        <a href="{{ pdf_url }}" download>
+            📄 Télécharger le rapport PDF
+        </a>
+    {% endif %}
 </body>
 </html>

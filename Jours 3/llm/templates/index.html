@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Analyse de marché avec Ollama</title>
+    <meta charset="UTF-8">
+    <title>Analyse de marché</title>
 </head>
 <body>
   <h1>Analyse de marché avec Ollama</h1>
   <form action="/analyse" method="post">
-    <label>Produits (séparés par des virgules):</label><br>
-    <input type="text" name="produits" placeholder="iPhone 15, Galaxy S24, Pixel 8"><br><br>
+    <label>Produits (séparés par des virgules) :</label><br>
+    <input type="text" name="produits" placeholder="Produit A, Produit B" required><br><br>
 
     <label>Secteur :</label><br>
-    <input type="text" name="secteur" placeholder="Smartphones haut de gamme"><br><br>
+    <input type="text" name="secteur" placeholder="Technologie, Santé..." required><br><br>
 
     <input type="submit" value="Analyser et Télécharger PDF">
   </form>
