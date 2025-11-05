@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat de l’étude de marché</title>
+</head>
+<body>
+    <h1>Résultat de l’étude de marché</h1>
+
+    {% if result %}
+        <h2>Données brutes générées :</h2>
+        <pre>{{ result | tojson(indent=2) }}</pre>
+    {% else %}
+        <p>Aucune donnée reçue.</p>
+    {% endif %}
+
+    <hr>
+    <a href="/">↩ Retour</a><br>
+    <a href="{{ pdf_path }}" download>Télécharger le PDF généré</a>
+</body>
+</html>
