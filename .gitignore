@@ -5,3 +5,10 @@ __pycache__/
 *.pyc
 env_fastapi/
 env_algo/
+env_fastapi2/
+*.png
+*.csv
+*.graphml
+*.json
+*.log
+*.txt
