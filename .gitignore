@@ -13,3 +13,4 @@ env_fastapi2/
 *.log
 *.txt
 .env
+*.txt
