@@ -8,6 +8,7 @@ from openai import OpenAI
 # CHARGEMENT DES CLÉS API
 # ===============================
 load_dotenv()
+print(os.getenv("SERPAPI_KEY"))
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
@@ -15,34 +16,22 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # ===============================
 # ÉTAPE 1 : COLLECTE DES DONNÉES
 # ===============================
-def fetch_google_play_apps(query="productivity apps"):
-    """Récupère une liste d'applications Google Play depuis SerpAPI."""
+def fetch_google_play_apps(query="fitness apps"):
     params = {
         "engine": "google_play",
         "q": query,
         "api_key": SERPAPI_KEY
     }
+    print("🔎 Test SerpAPI avec paramètres :", params)
 
     search = GoogleSearch(params)
     results = search.get_dict()
 
-    apps_data = results.get("apps", [])
-    if not apps_data:
-        print("⚠️ Aucun résultat trouvé. Vérifie ta clé SerpAPI ou essaie un autre mot-clé.")
-        return pd.DataFrame()
+    # Affiche les 2 premières clés de la réponse
+    print("🧩 Clés disponibles dans la réponse :", list(results.keys())[:5])
+    print("📱 Exemple de résultat brut :", results.get("apps", [])[0:1])
 
-    apps = []
-    for app in apps_data:
-        apps.append({
-            "title": app.get("title", ""),
-            "developer": app.get("developer", ""),
-            "score": app.get("score", None),
-            "installs": app.get("installs", None),
-            "category": app.get("category", ""),
-            "description": app.get("description", "")
-        })
-
-    return pd.DataFrame(apps)
+    return pd.DataFrame(results.get("apps", []))
 
 
 # ===============================
