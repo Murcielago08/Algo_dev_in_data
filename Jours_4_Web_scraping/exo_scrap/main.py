@@ -7,6 +7,7 @@ from openai import OpenAI
 # ===============================
 # CHARGEMENT DES CLÉS API
 # ===============================
+".env à créer dans le répertoire racine"
 load_dotenv()
 print(os.getenv("SERPAPI_KEY"))
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
