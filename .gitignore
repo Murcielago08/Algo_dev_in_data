@@ -6,6 +6,7 @@ __pycache__/
 env_fastapi/
 env_algo/
 env_fastapi2/
+.venv
 *.png
 *.csv
 *.graphml
@@ -14,3 +15,4 @@ env_fastapi2/
 *.txt
 .env
 #*.txt
+node_modules/
