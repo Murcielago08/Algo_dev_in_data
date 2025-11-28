@@ -1,5 +1,5 @@
 /.idea
-*.pdf
+# *.pdf
 *.pptx
 __pycache__/
 *.pyc
@@ -8,7 +8,7 @@ env_algo/
 env_fastapi2/
 .venv
 *.png
-*.csv
+# *.csv
 *.graphml
 *.json
 *.log
@@ -17,3 +17,4 @@ env_fastapi2/
 #*.txt
 node_modules/
 .vs/
+lab_2_challenge_2/
