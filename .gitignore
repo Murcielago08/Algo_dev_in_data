@@ -16,3 +16,4 @@ env_fastapi2/
 .env
 #*.txt
 node_modules/
+.vs/
